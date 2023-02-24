@@ -1,0 +1,57 @@
+<!--
+Coding Steps:
+-Create a full CRUD (Create, Read, Update, Delete) application of your choice using an API 
+-Use an existing API with AJAX to interact with it. 
+-Use a form to post new entities.
+-Build a way for users to update or delete entities
+-Use Bootstrap and CSS to style your project.
+-->
+
+<!--Sushi Restaurant App: User signs in by entering a name into a form and 
+    ordering food by inputting the item & quanitity-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sushi App</title>
+    <!--bootstrap stylesheet-->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/SushiApp.css">
+
+</head>
+<body class="container">
+
+    <div class="row">
+        <!--col 1: sushi restaurant welcome and link to menu-->
+        <div id="crazi-sushi" class="card col-sm">
+            <img class="card-img-top" src="./CraziSushi.png" alt="sushi menu">
+            <div class="card-body">
+                <p>Welcome! <br> Please sign in.</p>
+                <a href="./SushiMenu.html" class="btn btn-primary">Menu</a>
+            </div>
+        </div>
+
+        <!--col 2: input new table w form-->
+        <div id="new-table" class="card col-sm">
+            <h2>Table Name</h2>
+            <input type="text" id="new-table-name" class="form-control"> <!--bootstrap class; form control will go across the screen-->
+            <br>
+            <button id="create-new-table" class="btn btn-primary form-control">Create</button>
+        </div>
+    </div>
+
+    <!--div 2: store the inputted tables-->
+    <!--use jQuery to add new elements to the DOM-->
+    <div id="app" >
+
+    </div>
+
+    <!--scripts-->
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script> <!--jquery-->
+    <script src="SushiApp2.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script> <!--bootstrap js-->
+</body>
+</html>
